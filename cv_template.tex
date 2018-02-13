@@ -24,8 +24,8 @@
         {{ personal["name"] }}
     }
     { 
-        \urlstyle{same}\href{http://debarghyadas.com}{debarghyadas.com}| \href{http://fb.co/dd}{fb.co/dd} \\
-        \href{mailto:deedy@fb.com}{deedy@fb.com} | 607.379.5733 | \href{mailto:dd367@cornell.edu}{dd367@cornell.edu}
+        \urlstyle{same}\href{ {{personal["url"]}} }{ {{personal["web"]}} } \\
+        \href{mailto:{{personal["email"]}}}{ {{personal["email"]}} } | {{personal["phone"]}}
     }
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -42,6 +42,16 @@
     
     \section{Education} 
     
+  {% for edu in education %}
+  \subsection{ {{ edu["name"] }} }
+  \descript{ {{edu["degree"]}} }
+  \location{ {{edu["date"]}} | {{edu["city"]}} }
+  {% for s in edu["other"] %}
+  \location{ {{s}} }
+  {% endfor %}
+  \sectionsep
+  {% endfor %}
+
     \subsection{Cornell University}
     \descript{MEng in Computer Science}
     \location{Dec 2014 | Ithaca, NY}

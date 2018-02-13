@@ -1,9 +1,12 @@
 personal:
   name: Carl Pearson
   email: carl.w.pearson@gmail.com
-  web: cwpearson.github.com
+  url: https://cwpearson.github.com
+  web: cwpearson.github.io
 education:
   - name: Harvey Mudd College
     degree: BS with Highest Honors, Engineering
     date: May 2013
     city: Claremont, CA
+    other:
+      - "GPA: 3.75"

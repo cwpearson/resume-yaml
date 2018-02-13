@@ -6,7 +6,7 @@ from jinja2 import Template
 
 content_path = "cv.yaml"
 layout_path = "cv_template.tex"
-tex_path = "cv.tex"
+tex_path = "cv_pearson.tex"
 
 with open(content_path, 'r') as yaml_file:
     data = load(yaml_file)

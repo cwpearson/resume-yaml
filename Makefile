@@ -1,10 +1,12 @@
 
-all: cv_pearson.pdf
+all: cv_pearson.tex
 
-cv_pearson.pdf: cv.yaml cv_template.tex
-	rm cv.tex
+cv_pearson.tex: cv.yaml cv_template.tex
+	rm -f cv_pearson.tex
 	./build.py
-	# pdflatex cv.tex
+
+cv_pearson.pdf: cv_pearson.tex
+	pdflatex cv_pearson.tex
 
 .PHONY: clean
 clean:
